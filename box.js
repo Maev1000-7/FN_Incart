@@ -1,24 +1,16 @@
-// нужен массив из кучи дублей в котором есть один беспризорник
-// Массив заполняем от 0 до того что скажет пользователь, а потом 
-// пихаем туда в случайное место 1 число
+// Вторая версия, теперь в массив из 6 символов запихивается одиночка 
+// на случайный индекс.   Больше не надо указывать размер массива
 
-function generateArr(limit) {
+// А поиск производится одним циклом, но внутри обновляется счетчик, так что
+// не совсем o(n), но уже проще 
+
+function generateArr() {
+
+    let arr = [1, 2, 3, 1, 2, 3];
     
-    limit /= 2; 
-    
-    let arr = [];
-
-    for (let i = 0; i < limit; i++)
-        arr[i] = i;
-    
-    // ... вставляет массив поэлементно
-    arr.push(...arr);
-
-    // Рандом умеет только от 0 до 1 гадать, умножим на длинну массива тк нам нужен случайный индекс
-
     let randomIndex = Math.round(Math.random() * arr.length);
 
-    let newElement = 100500; // пока представим что элементы дальше 100499 не идут
+    let newElement = 4; 
 
     arr.splice(randomIndex, 0, newElement);  // аргументы метода splice: позиция куда пихаем, сколько элементов надо удалить, что пихаем
     
@@ -26,41 +18,57 @@ function generateArr(limit) {
 }
 
 
-function detective(limit) {
 
-    let arr = generateArr(limit);
+function detective() {
 
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[i] == arr[j]) {
-                arr.splice(j, 1);
-                arr.splice(i, 1);
-                i--; 
-                break;
-            }
+    let arr = generateArr();
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[0] == arr[i]) {
+            arr.splice(i, 1);
+            arr.splice(0, 1);
         }
+            
     }
-    let lonelyNum = arr[0]
+    
+    let lonelyNum = arr[0];
+   
     return lonelyNum;
 }
 
-function find(limit){
+
+
+function find() {
     let start = performance.now();
-    let lonelyNum = detective(limit);
+    let lonelyNum = detective();
     let duration = Math.round(performance.now() - start);
     return {lonelyNum, duration} ;
 }
 
 
 function lonely(){
-    let limit = parseInt(document.getElementById('halfArray').value);
-    let {lonelyNum, duration} = find(limit)
-
+    
+    let {lonelyNum, duration} = find()
 
     lonelyNumHtml.textContent = 'Одинокий элемент массива: '+ lonelyNum;
 
-
     document.getElementById('timeL').textContent = duration + ' мс'
 }
- 
 
+
+
+// Старье с вложенным циклом 
+
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//             if (arr[i] == arr[j]) {
+//                 arr.splice(j, 1);
+//                 arr.splice(i, 1);
+//                 i--; 
+//                 break;
+//             }
+//         }
+//     }
+//     let lonelyNum = arr[0]
+//     return lonelyNum;
+// }
