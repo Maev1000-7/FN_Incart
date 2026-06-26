@@ -9,48 +9,62 @@
 </head>
 <body>
 
-
     <link rel="stylesheet" href="style.css">
 
-<!-- Ищем одиночек -->
-    <div style="margin: 20px;">
 
-    <script src = "box.js"></script>
+    <div class="hat">
+        <button class="hat_button" onclick="layout(1)"> Задание 1 </button>
+        <button class="hat_button" onclick="layout(2)"> Задание 2</button>
+        <button class="hat_button" onclick="layout(3)"> Задание 3</button>
+        
+        <div class="hat_controls">
 
-    <!-- <input type="number" id="halfArray"> -->
+        </div>
+
+    </div>
+
+    <!-- Ищем одиночек -->
     
-    <button onclick="lonely()"> Искать одиночку </button>
+    
+    <div class="lonelyNumAssignment">
 
-    <p id="lonelyNumHtml"></p>
-    <p id="timeL"></p>
+        <button onclick="lonely()"> Искать одиночку </button>
+
+        <p id="lonelyNumHtml"></p>
+        <p id="timeL"></p>
 
     </div>
 
 
-<!-- Ищем друзей -->
-    <div style="margin: 20px;
-                margin-top: 80px;">
-
-    <script src="script.js"></script>
-
-    <p id="result"></p>
-
-    <input type="number" id="limit">
-    <button onclick="CIF_limit()"> Искать друзей </button>
-
-    <pre id="pairs"> </pre>
-    <p id="time"> </p>
+    <!-- Ищем друзей -->
     
+
+    <div class="friendNumAssignment">
+        <p id="result"></p>
+
+        <input type="number" id="limit">
+        <button onclick="CIF_limit()"> Искать друзей </button>
+
+        <pre id="pairs"> </pre>
+        <p id="time"> </p>
+
     </div>
 
 
     <!-- Третье заданиие, Верстка -->
 
-
-    <div class="text_box">
-        <p class="p_left">DDD_DDD_DDD_DDD</p>
-        <p class="p_right">XXX_XXX_XXX_XXX</p>
+    <div class="layoutAssignment">
+        <div class="text_box">
+            <p class="p_left">DDD_DDD_DDD_DDD</p>
+            <p class="p_right">XXX_XXX_XXX_XXX</p>
+        </div>
     </div>
+
+
+    <script src = "1__friendNum.js"></script>
+    <script src="2__lonelyNum.js"></script>
+    <script src="3__layout.js"></script>
+    
 
 </body>
 </html>
