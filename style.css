@@ -1,45 +1,31 @@
 /*     Возможно, так делать нельзя  */
 /*     Чтобы только после нажатия кнопки задания появлялись */
 
-.lonelyNumAssignment, .friendNumAssignment, .layoutAssignment {
-    display: none;
-} 
-
-.hat{
-    display: flex;
-
-    height: 60px;
-    justify-content: space-around;  
-
-    padding-bottom: 30px;
-}
-
-
-.hat_button {
-    background-color: rgb(255, 228, 154);
-    border: solid rgb(255, 228, 154);
-    border-radius: 20mm ;
-    
-    flex: 0 1 auto;
-    width: 240px;    
-}
-
-
-
 
 /*     Третье задание - верстка  */
 .text_box {
     display: flex; 
-    border: 1px solid coral; 
-    margin: auto;                 
-    width: 600px;
 
+    border: 1px solid coral; 
+    border-radius: 5px;
+
+    margin: auto;                 
+    width: 100%;
+    max-width: 600px;
     justify-content: space-between; 
 }
 
-.p_left  { text-align: left; padding: 0px;}
-.p_right { text-align: right; padding: 0px;} 
+.text_box p {
+    margin: 15px; 
 
+}
 
+.p_left  { 
+    text-align: left; 
+    
+}
 
-
+.p_right { 
+    text-align: right; 
+    /* scale: 2; */
+} 

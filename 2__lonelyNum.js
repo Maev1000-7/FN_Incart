@@ -1,5 +1,4 @@
 function generateArr() {
-
     let arr = [1, 2, 3, 1, 2, 3];
     
     let randomIndex = Math.round(Math.random() * arr.length);
@@ -34,15 +33,16 @@ function find() {
 }
 
 
-function lonely(){
+function main(){
     
     let {lonelyNum, duration} = find()
 
-    lonelyNumHtml.textContent = 'Одинокий элемент массива: '+ lonelyNum;
-
-    document.getElementById('timeL').textContent = duration + ' мс'
+    console.log('Одинокий элемент массива: '+ lonelyNum);
+    
+    console.log('Время выполнения: ' + duration + ' мс');
 }
 
+main();
 
 
 
