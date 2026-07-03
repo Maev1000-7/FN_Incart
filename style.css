@@ -1,31 +1,96 @@
-/*     Возможно, так делать нельзя  */
-/*     Чтобы только после нажатия кнопки задания появлялись */
 
+/* ================================== JS + css ========================================= */
 
-/*     Третье задание - верстка  */
 .text_box {
-    display: flex; 
+    margin-top: 50px;
+     
+    
+    display:flex; 
 
-    border: 1px solid coral; 
+    border: 2px solid black; 
     border-radius: 5px;
-
-    margin: auto;                 
+ 
     width: 100%;
     max-width: 600px;
     justify-content: space-between; 
+    background-color: #F0DB4F;
+
+    height: 100%;
+
 }
 
 .text_box p {
-    margin: 15px; 
-
+    padding: 0px;    
+    margin: 0px;
 }
 
 .p_left  { 
-    text-align: left; 
-    
+    /* background-color: #95f76e; */
 }
 
 .p_right { 
-    text-align: right; 
-    /* scale: 2; */
+    /* background-color: #c9bf37; */
+    /* transform: scale(2);  */
 } 
+
+
+
+
+/* ================================== Чисто css 1 ========================================= */
+
+
+
+ .parent_A {
+    display: flex;
+    background-color: #7fd0ff;
+    border: 2px solid black;
+    border-radius: 5px;
+
+
+    max-width: 600px;
+    
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    margin-top: 100px;
+
+    align-content: center;
+    
+}
+
+.parent_A p {
+
+    
+    padding: 0;
+    background-color: #e6b544;
+
+    margin: 0;
+} 
+
+/* ================================== Чисто css 2 ========================================= */
+
+.parent_B {
+    display: flex;
+    background-color: #7fd0ff;
+    border: 2px solid black;
+    border-radius: 5px;
+
+
+    max-width: 600px;
+    
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    margin-top: 100px;
+}
+
+.parent_B p {
+    margin: 0;
+    padding: 0;
+    background-color: #e6b544;
+} 
+
+
+

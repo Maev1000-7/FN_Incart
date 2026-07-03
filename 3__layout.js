@@ -7,7 +7,7 @@ function checkWidth() {
 
     const boxWidth = box.getBoundingClientRect().width;
 
-    const totalWidth = left.getBoundingClientRect().width + right.getBoundingClientRect().width + 60; // + margin
+    const totalWidth = left.getBoundingClientRect().width + right.getBoundingClientRect().width; // + margin
     
     if (totalWidth > boxWidth) {
         
