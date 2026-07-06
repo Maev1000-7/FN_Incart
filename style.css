@@ -1,3 +1,14 @@
+body div {
+margin: auto;
+
+
+}
+
+body p {
+    text-align: center;
+}
+
+
 
 /* ================================== JS + css ========================================= */
 
@@ -36,7 +47,7 @@
 
 
 
-/* ================================== Чисто css 1 ========================================= */
+/* ================================== Чисто css flexbox 1 ========================================= */
 
 
 
@@ -55,7 +66,7 @@
 
     margin-top: 100px;
 
-    align-content: center;
+    /* align-items: stretch; */
     
 }
 
@@ -63,12 +74,12 @@
 
     
     padding: 0;
-    background-color: #e6b544;
+    background-color: #ffd574;
 
     margin: 0;
 } 
 
-/* ================================== Чисто css 2 ========================================= */
+/* ================================== Чисто css flexbox 2 ========================================= */
 
 .parent_B {
     display: flex;
@@ -89,8 +100,30 @@
 .parent_B p {
     margin: 0;
     padding: 0;
-    background-color: #e6b544;
+    background-color: #ffd574;
 } 
 
+/* ================================== Чисто css gridbox ========================================= */
 
+.text-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: space-between;
+  gap: 1em;
+  
+
+  background: #7fd0ff;
+  border: solid black 2px;
+  border-radius: 5px;
+
+   margin-top: 100px;
+}
+
+.item-grid{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+  background-color: #ffd574;
+}
 
