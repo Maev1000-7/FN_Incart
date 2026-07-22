@@ -1,129 +1,104 @@
-body div {
-margin: auto;
 
 
+
+
+
+
+
+
+
+/* body div {
+  margin: auto;
 }
 
 body p {
-    text-align: center;
-}
-
-
+  text-align: center;
+} */
 
 /* ================================== JS + css ========================================= */
 
-.text_box {
-    margin-top: 50px;
-     
-    
-    display:flex; 
-
-    border: 2px solid black; 
-    border-radius: 5px;
- 
-    width: 100%;
-    max-width: 600px;
-    justify-content: space-between; 
-    background-color: #F0DB4F;
-
-    height: 100%;
-
+/* .text_box {
+  margin-top: 50px;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  justify-content: space-between;
+  background-color: #f0db4f;
+  height: 100%;
 }
 
 .text_box p {
-    padding: 0px;    
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
-.p_left  { 
-    /* background-color: #95f76e; */
+.p_left {
+  background-color: #95f76e;
 }
 
-.p_right { 
-    /* background-color: #c9bf37; */
-    /* transform: scale(2);  */
-} 
-
-
-
+.p_right {
+  background-color: #c9bf37;
+  transform: scale(2);
+} */
 
 /* ================================== Чисто css flexbox 1 ========================================= */
-
-
-
- .parent_A {
-    display: flex;
-    background-color: #7fd0ff;
-    border: 2px solid black;
-    border-radius: 5px;
-
-
-    max-width: 600px;
-    
-    justify-content: space-between;
-
-    flex-wrap: wrap;
-
-    margin-top: 100px;
-
-    /* align-items: stretch; */
-    
+/* 
+.parent_A {
+  display: flex;
+  background-color: #7fd0ff;
+  border: 2px solid black;
+  border-radius: 5px;
+  max-width: 600px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  align-items: stretch;
 }
 
 .parent_A p {
+  padding: 0;
+  background-color: #ffd574;
 
-    
-    padding: 0;
-    background-color: #ffd574;
-
-    margin: 0;
-} 
+  margin: 0;
+} */
 
 /* ================================== Чисто css flexbox 2 ========================================= */
 
-.parent_B {
-    display: flex;
-    background-color: #7fd0ff;
-    border: 2px solid black;
-    border-radius: 5px;
-
-
-    max-width: 600px;
-    
-    justify-content: space-around;
-
-    flex-wrap: wrap;
-
-    margin-top: 100px;
+/* .parent_B {
+  display: flex;
+  background-color: #7fd0ff;
+  border: 2px solid black;
+  border-radius: 5px;
+  max-width: 600px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 100px;
 }
 
 .parent_B p {
-    margin: 0;
-    padding: 0;
-    background-color: #ffd574;
-} 
+  margin: 0;
+  padding: 0;
+  background-color: #ffd574;
+} */
 
 /* ================================== Чисто css gridbox ========================================= */
 
-.text-grid{
+/* .text-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-content: space-between;
   gap: 1em;
-  
-
   background: #7fd0ff;
   border: solid black 2px;
   border-radius: 5px;
-
-   margin-top: 100px;
+  margin-top: 100px;
 }
 
-.item-grid{
+.item-grid {
   display: flex;
   flex-direction: column;
   text-align: center;
-  
   background-color: #ffd574;
-}
-
+} */

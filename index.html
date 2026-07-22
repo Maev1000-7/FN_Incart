@@ -1,72 +1,113 @@
 <!-- Ищем работу  -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-<body>
+    <div class="flex-container">
+        <div class="left-flex-container">
+            <p class="left-p">XXX_XXX_XXX_XXX_XXX_XXX_XXX_XXX_XXX_XXX </p>
+        </div>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Третье заданиие, Верстка -->
-
-
-
-    <div class="text_box">
-
-        <p class="p_left">DDD_DDD_DDD_DDD</p>
-        <p class="p_right">XXX_XXX_XXX_XXX</p>
-
+        <div class="right-flex-container">
+            <p class="right-p">DDD_DDD_DDD_DDD_DDD_DDD_DDD_DDD_DDD_DDD</p>
+        </div>
     </div>
 
 
-    <p>Вариант JS, scale победить пока не получилось</p>
+    <style>
+        .flex-container{
+            display: flex;
+            
+            padding: 10px;
+            margin: auto;
+
+            border: 3px solid rgb(74, 110, 20);
+
+            flex-wrap: wrap;
+        }
+
+        .left-flex-container{
+            display: flex;
+
+            /* border: 3px solid rgb(139, 27, 27); */
+            flex-grow: 0.5;
 
 
-    <script src="3__layout.js"></script>
+            /* flex-basis: auto;  */
+            /* justify-content: flex-end; */
+            margin-left: auto;
+        }
 
+        .right-flex-container{
+            display: flex;
 
+            /* border: 3px solid rgb(139, 27, 27); */
 
-    <!--  ================================== Чисто css =========================================  -->
+            flex-grow: 0.5;
+   
 
+            justify-content: flex-end;
+            margin-right: auto;
 
+  
+            
+        }
 
+        /* .left-p{ 
+            text-align: left;
+        }
+        .right-p{
+            text-align: right;
+        } */
+    </style>
 
-    <div class="parent_A">
-        <p class="right_a">XXX_XXX_XXX_XXX</p>
-        <p class="left_a">DDD_DDD_DDD_DDD</p>
-    </div>
-
-
-    <p>Вариант only css, <strong>space-between</strong> <br>
-        форматирование <strong>по центру</strong> пока победить не получилось</p>
-
-
-    <div class="parent_B">
-        <p class="right_b">XXX_XXX_XXX_XXX</p>
-        <p class="left_b">DDD_DDD_DDD_DDD</p>
-    </div>
-
-
-    <p>Вариант only css, <strong>space-around</strong> <br>
-        форматирование <strong>по краям</strong> пока победить не получилось</p>
-
-
-    <div class="text-grid">
-        <p class="item-grid">XXX_XXX_XXX_XXX</p>
-        <p class="item-grid">DDD_DDD_DDD_DDD</p>
-    </div>
-
-    <p>Вариант only css, <strong>теперь на гридах</strong> <br>
-    у этого метода точно такая же проблема как и у метода с шириной контейнера </p>
-
-
-
-</body>
-
+  </body>
 </html>
+
+<!-- Третье заданиие, Верстка -->
+<!-- <div class="text_box">
+  <p class="p_left">DDD_DDD_DDD_DDD</p>
+  <p class="p_right">XXX_XXX_XXX_XXX</p>
+</div>
+<p>Вариант JS, scale победить пока не получилось</p>
+
+<script src="3__layout.js"></script> -->
+
+<!-- ================================== Чисто css =========================================   -->
+
+<!-- <div class="parent_A">
+  <p class="right_a">XXX_XXX_XXX_XXX</p>
+  <p class="left_a">DDD_DDD_DDD_DDD</p>
+</div>
+
+<p>
+  Вариант only css, <strong>space-between</strong> <br />
+  форматирование <strong>по центру</strong> пока победить не получилось
+</p>
+
+<div class="parent_B">
+  <p class="right_b">XXX_XXX_XXX_XXX</p>
+  <p class="left_b">DDD_DDD_DDD_DDD</p>
+</div>
+
+<p>
+  Вариант only css, <strong>space-around</strong> <br />
+  форматирование <strong>по краям</strong> пока победить не получилось
+</p>
+
+<div class="text-grid">
+  <p class="item-grid">XXX_XXX_XXX_XXX</p>
+  <p class="item-grid">DDD_DDD_DDD_DDD</p>
+</div>
+
+<p>
+  Вариант only css, <strong>теперь на гридах</strong> <br />
+  у этого метода точно такая же проблема как и у метода с шириной контейнера
+</p> -->
