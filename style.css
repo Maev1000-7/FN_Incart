@@ -1,11 +1,35 @@
+.flex-container {
+  display: flex;
 
+  padding: 10px;
+  margin: auto;
 
+  border: 3px solid rgb(74, 110, 20);
 
+  flex-wrap: wrap;
+}
 
+.left-flex-container {
+  display: flex;
 
+  /* border: 3px solid rgb(139, 27, 27); */
+  flex-grow: 0.5;
 
+  /* flex-basis: auto;  */
+  /* justify-content: flex-end; */
+  margin-left: auto;
+}
 
+.right-flex-container {
+  display: flex;
 
+  /* border: 3px solid rgb(139, 27, 27); */
+
+  flex-grow: 0.5;
+
+  justify-content: flex-end;
+  margin-right: auto;
+}
 
 /* body div {
   margin: auto;
