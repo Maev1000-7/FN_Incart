@@ -1,38 +1,25 @@
+function centered() {
+  const box = document.querySelector(".flex-container");
+  const left = document.querySelector(".left-p");
+  const right = document.querySelector(".right-p");
 
-function checkWidth() {
-    
-    const box = document.querySelector('.text_box');
-    const left = document.querySelector('.p_left');
-    const right = document.querySelector('.p_right');
+  const boxWidth = box.getBoundingClientRect().width;
 
-    const boxWidth = box.getBoundingClientRect().width;
+  const totalWidth =
+    left.getBoundingClientRect().width + right.getBoundingClientRect().width;
 
-    const totalWidth = left.getBoundingClientRect().width + right.getBoundingClientRect().width; // + margin
-    
-    if (totalWidth > boxWidth) {
-        
-        box.style.flexDirection = 'column';
-        box.style.alignItems = 'center';
-        
-        left.style.textAlign = 'center';
-        
-        right.style.textAlign = 'center';
-    
-    } else {
-        
-        box.style.flexDirection = 'row';
-        box.style.alignItems = 'stretch';
-        
-        left.style.textAlign = 'left';
-        
-        right.style.textAlign = 'right';
-    }
-
-    
+  if (totalWidth > boxWidth) {
+    box.style.flexDirection = "column";
+    box.style.alignItems = "center";
+    right.style.transformOrigin = `center center`;
+    left.style.transformOrigin = `center center`;
+  } else {
+    box.style.flexDirection = "row";
+    box.style.alignItems = "stretch";
+    right.style.transformOrigin = `right center`;
+    left.style.transformOrigin = `left center`;
+  }
 }
 
-window.addEventListener('resize', checkWidth);
-checkWidth();
-
-
-
+window.addEventListener("resize", centered);
+centered();
